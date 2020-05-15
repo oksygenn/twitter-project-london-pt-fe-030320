@@ -32,6 +32,10 @@ module.exports = {
       inject: true,
       template: resolveAppPath("public/index.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: "login.html",
+      template: resolveAppPath("public/login.html"),
+    }),
   ],
   module: {
     rules: [

@@ -5,8 +5,9 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(22, 21, 21);
   text-align: center;
+  font-family: Roboto, serif;
 }
 
 main {
@@ -19,54 +20,55 @@ main {
     url(../../public/images/small-yellow-bottom.svg) left 55vw top 92vh;
   background-repeat: no-repeat;
 }
+
 .login-page-image {
   position: absolute;
-  /* height: 20%; */
-  top: 30%;
+  top: 20%;
   left: 50%;
-  margin-left: -57.5px;
-  margin-top: -73.5px;
+  transform: translate(-50%);
 }
 
 form {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  margin-left: -96px;
+  transform: translate(-50%);
 }
 
 input {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 input.username,
 input.password {
-  width: 192px;
-  height: 0;
-  background-color: yellow;
-  border: 2px solid yellow;
+  width: 240px;
+  height: 25px;
+  background-color: rgb(22, 21, 21);
+  border: none;
+  border-bottom: solid 2px yellow;
+  font-size: 0.8em;
+  margin: 1em;
+  padding: 0.2em;
+  color: white;
+}
+
+::placeholder {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0.5em;
 }
 
 .login-button {
   background-color: yellow;
-  /* background-color: aqua; */
-  width: 116px;
-  height: 37px;
+  width: 120px;
+  height: 2em;
+  border: none;
+  border-radius: 5%;
+  font-size: 1em;
+  font-weight: 600;
 }
 
-/* background with triangles */
-/* .background {
-  position: relative;
-  height: 100vh;
-}
-
-.triangle1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.triangle2 {
+.yellow-triangle {
   position: absolute;
   width: 0;
   height: 0;
@@ -77,27 +79,3 @@ input.password {
   left: -5vw;
   transform: rotate(-30deg);
 }
-
-.triangle3 {
-  position: absolute;
-  top: 10%;
-  right: 4%;
-}
-
-.triangle4 {
-  position: absolute;
-  bottom: 30%;
-  right: 0;
-}
-
-.triangle5 {
-  position: absolute;
-  bottom: 13%;
-  left: 0;
-}
-
-.triangle6 {
-  position: absolute;
-  bottom: 0;
-  right: 15%;
-} */
