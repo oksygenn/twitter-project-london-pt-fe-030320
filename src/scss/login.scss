@@ -12,11 +12,11 @@ body {
 main {
   position: relative;
   height: 100vh;
-  background: url(./images/large-purple-top.svg) left 0 top 0,
-    url(./images/small-purple-top.svg) right 5vw top 5vh,
-    url(./images/small-purple-left.svg) left 0 top 60vh,
-    url(./images/small-purple-right.svg) right 0 top 50vh,
-    url(./images/small-yellow-bottom.svg) left 55vw top 92vh;
+  background: url(../../public/images/large-purple-top.svg) left 0 top 0,
+    url(../../public/images/small-purple-top.svg) right 5vw top 5vh,
+    url(../../public/images/small-purple-left.svg) left 0 top 60vh,
+    url(../../public/images/small-purple-right.svg) right 0 top 50vh,
+    url(../../public/images/small-yellow-bottom.svg) left 55vw top 92vh;
   background-repeat: no-repeat;
 }
 .login-page-image {
