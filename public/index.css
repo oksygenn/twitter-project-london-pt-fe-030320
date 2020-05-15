@@ -10,6 +10,7 @@ body {
 }
 
 main {
+  position: relative;
   height: 100vh;
   background: url(./images/large-purple-top.svg) left 0 top 0,
     url(./images/small-purple-top.svg) right 5vw top 5vh,
@@ -18,11 +19,39 @@ main {
     url(./images/small-yellow-bottom.svg) left 55vw top 92vh;
   background-repeat: no-repeat;
 }
+.login-page-image {
+  position: absolute;
+  /* height: 20%; */
+  top: 30%;
+  left: 50%;
+  margin-left: -57.5px;
+  margin-top: -73.5px;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -96px;
+}
+
+input {
+  margin: 2em 0;
+}
+
+input.username,
+input.password {
+  width: 192px;
+  height: 0;
+  background-color: yellow;
+  border: 2px solid yellow;
+}
 
 .login-button {
-  color: red;
-  background-color: aqua;
-  width: 100px;
+  background-color: yellow;
+  /* background-color: aqua; */
+  width: 116px;
+  height: 37px;
 }
 
 /* background with triangles */
