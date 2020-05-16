@@ -1,16 +1,21 @@
+$background: black;
+$content-background: white;
+$theme-primary: yellow;
+$theme-secondary: purple;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: rgb(22, 21, 21);
+body.login {
+  background-color: $background;
   text-align: center;
   font-family: Roboto, serif;
 }
 
-main {
+main.login-background {
   position: relative;
   height: 100vh;
   background: url(../../public/images/large-purple-top.svg) left 0 top 0,
@@ -19,6 +24,18 @@ main {
     url(../../public/images/small-purple-right.svg) right 0 top 50vh,
     url(../../public/images/small-yellow-bottom.svg) left 55vw top 92vh;
   background-repeat: no-repeat;
+
+  .yellow-triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 198px 90.5px 0 90.5px;
+    border-color: $theme-primary transparent transparent transparent;
+    top: -8vh;
+    left: -5vw;
+    transform: rotate(-30deg);
+  }
 }
 
 .login-page-image {
@@ -33,49 +50,37 @@ form {
   top: 40%;
   left: 50%;
   transform: translate(-50%);
-}
 
-input {
-  margin: 1em 0;
-}
+  input {
+    margin: 1em 0;
+  }
 
-input.username,
-input.password {
-  width: 240px;
-  height: 25px;
-  background-color: rgb(22, 21, 21);
-  border: none;
-  border-bottom: solid 2px yellow;
-  font-size: 0.8em;
-  margin: 1em;
-  padding: 0.2em;
-  color: white;
-}
+  .username,
+  .password {
+    width: 240px;
+    height: 25px;
+    background-color: $background;
+    border: none;
+    border-bottom: solid 2px $theme-primary;
+    font-size: 0.8em;
+    margin: 1em;
+    padding: 0.2em;
+    color: $content-background;
+  }
 
-::placeholder {
-  display: inline-block;
-  font-size: 0.8em;
-  padding: 0.5em;
-}
+  .login-button {
+    background-color: $theme-primary;
+    width: 120px;
+    height: 2em;
+    border: none;
+    border-radius: 5%;
+    font-size: 1em;
+    font-weight: 600;
+  }
 
-.login-button {
-  background-color: yellow;
-  width: 120px;
-  height: 2em;
-  border: none;
-  border-radius: 5%;
-  font-size: 1em;
-  font-weight: 600;
-}
-
-.yellow-triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 198px 90.5px 0 90.5px;
-  border-color: #f7ff00 transparent transparent transparent;
-  top: -8vh;
-  left: -5vw;
-  transform: rotate(-30deg);
+  ::placeholder {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0.5em;
+  }
 }

@@ -1,0 +1,20 @@
+body.main-default-background {
+  background-color: $content-background;
+}
+
+div.main-default-shapes {
+  position: relative;
+  height: 100vh;
+  background: url(../../public/images/main-wave.svg) left 0 top 0,
+    url(../../public/images/main-yellow-shape.svg) left 50vw top 40vh,
+    url(../../public/images/main-purple-right.svg) right 0 top 50vh,
+    url(../../public/images/main-purple-left.svg) left 0 bottom 8vh,
+    url(../../public/images/main-human.svg) left 0 bottom 30vh;
+  background-repeat: no-repeat;
+}
+
+header.main-page {
+  position: absolute;
+  top: 0;
+  color: $content-background;
+}
