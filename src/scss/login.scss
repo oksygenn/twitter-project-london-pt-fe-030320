@@ -1,18 +1,6 @@
-$background: black;
-$content-background: white;
-$theme-primary: yellow;
-$theme-secondary: purple;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body.login {
   background-color: $background;
   text-align: center;
-  font-family: Roboto, serif;
 }
 
 main.login-background {

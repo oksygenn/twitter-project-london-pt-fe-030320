@@ -1,9 +1,24 @@
+$background: black;
+$content-background: white;
+$theme-primary: yellow;
+$theme-secondary: purple;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
 body.main-default-background {
   background-color: $content-background;
 }
 
-div.main-default-shapes {
-  position: relative;
+div.main-default-background-shapes {
   height: 100vh;
   background: url(../../public/images/main-wave.svg) left 0 top 0,
     url(../../public/images/main-yellow-shape.svg) left 50vw top 40vh,
@@ -16,5 +31,60 @@ div.main-default-shapes {
 header.main-page {
   position: absolute;
   top: 0;
+  display: flex;
+  align-items: flex-start;
   color: $content-background;
+  width: 100vw;
+  margin-top: 2em;
+
+  .full-name {
+    letter-spacing: 0.1em;
+    // font-size: 18px;
+    // font-weight: 900;
+  }
+
+  .main-icon {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    background-color: $theme-primary;
+    clip-path: circle(49% at center);
+    margin: 0 2em;
+
+    .camera {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  div.details {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    ul.details-extra {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 0.8em;
+
+      .user-info {
+        font-style: italic;
+      }
+
+      li {
+        padding: 0.5em 0;
+
+        span.bold-numbers {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.tweet {
+  width: 60vw;
+  height: auto;
 }
