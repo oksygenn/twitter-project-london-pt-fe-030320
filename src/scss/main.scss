@@ -1,6 +1,6 @@
 $background: black;
-$content-background: white;
-$theme-primary: yellow;
+$content-background: #ffffff;
+$theme-primary: #e7e417;
 $theme-secondary: purple;
 
 * {
@@ -8,6 +8,8 @@ $theme-secondary: purple;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  // font-size: 14px;
+  line-height: 1.4em;
 }
 
 li {
@@ -33,14 +35,12 @@ header.main-page {
   top: 0;
   display: flex;
   align-items: flex-start;
-  color: $content-background;
+  color: rgb(202, 197, 197);
   width: 100vw;
   margin-top: 2em;
 
   .full-name {
     letter-spacing: 0.1em;
-    // font-size: 18px;
-    // font-weight: 900;
   }
 
   .main-icon {
@@ -84,7 +84,47 @@ header.main-page {
   }
 }
 
-.tweet {
-  width: 60vw;
+.tweets-container {
+  // background-color: green;
   height: auto;
+  width: 85vw;
+  position: absolute;
+  top: 17vh;
+  left: 50vw;
+  transform: translate(-50%);
+  height: auto;
+
+  .tweet {
+    background-color: white;
+    width: 80vw;
+    margin: 2em auto;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: -2px 11px 14px -6px rgba(46, 46, 46, 0.54);
+
+    .tweet-header {
+      display: flex;
+      justify-content: space-between;
+      background-color: $theme-primary;
+      padding: 0.9em;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .tweet-body {
+      padding: 0.9em;
+      font-weight: 200;
+    }
+
+    .tweet-line {
+      border-bottom: 1px solid rgb(202, 202, 202);
+      margin: 0.5em 0.9em;
+    }
+
+    .tweets-footer {
+      display: flex;
+      justify-content: space-around;
+      margin: 1em;
+    }
+  }
 }
