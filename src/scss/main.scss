@@ -15,29 +15,43 @@ $theme-secondary: purple;
 li {
   list-style: none;
 }
-
 body.main-default-background {
-  background-color: $content-background;
-}
-
-div.main-default-background-shapes {
   height: 100vh;
   background: url(../../public/images/main-wave.svg) left 0 top 0,
     url(../../public/images/main-yellow-shape.svg) left 50vw top 40vh,
     url(../../public/images/main-purple-right.svg) right 0 top 50vh,
     url(../../public/images/main-purple-left.svg) left 0 bottom 8vh,
     url(../../public/images/main-human.svg) left 0 bottom 30vh;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+
+  .new-tweet-icon {
+    position: fixed;
+    bottom: 6vh;
+    right: 6vw;
+  }
 }
+// div.main-default-background-shapes {
+//   height: 100vh;
+//   background: url(../../public/images/main-wave.svg) left 0 top 0,
+//     url(../../public/images/main-yellow-shape.svg) left 50vw top 40vh,
+//     url(../../public/images/main-purple-right.svg) right 0 top 50vh,
+//     url(../../public/images/main-purple-left.svg) left 0 bottom 8vh,
+//     url(../../public/images/main-human.svg) left 0 bottom 30vh;
+//   background-attachment: fixed;
+//   background-repeat: no-repeat;
+// }
 
 header.main-page {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   align-items: flex-start;
   color: rgb(202, 197, 197);
   width: 100vw;
-  margin-top: 2em;
+  padding-top: 2em;
+  z-index: 1;
+  background-color: $background;
 
   .full-name {
     letter-spacing: 0.1em;
@@ -82,17 +96,26 @@ header.main-page {
       }
     }
   }
+  .header-purple-hr-line {
+    border-bottom: 1px solid $theme-secondary;
+    margin: 0.4em 0;
+  }
+
+  .header-grey-hr-line {
+    border-bottom: 1px solid rgb(170, 170, 114);
+    width: 60%;
+    margin-bottom: 0.7em;
+  }
 }
 
 .tweets-container {
-  // background-color: green;
+  background-color: transparent;
   height: auto;
-  width: 85vw;
+  width: 85%;
   position: absolute;
-  top: 17vh;
-  left: 50vw;
+  top: 17%;
+  left: 50%;
   transform: translate(-50%);
-  height: auto;
 
   .tweet {
     background-color: white;
@@ -112,19 +135,25 @@ header.main-page {
     }
 
     .tweet-body {
-      padding: 0.9em;
+      padding: 0.8em 1.3em;
       font-weight: 200;
+
+      .tweet-line {
+        border-bottom: 1px solid rgb(202, 202, 202);
+        margin-top: 0.5em;
+      }
+
+      .hashtag {
+        margin: 0.5em 0;
+        font-size: 0.9em;
+        color: $theme-secondary;
+      }
     }
 
-    .tweet-line {
-      border-bottom: 1px solid rgb(202, 202, 202);
-      margin: 0.5em 0.9em;
-    }
-
-    .tweets-footer {
+    .tweet-footer {
       display: flex;
       justify-content: space-around;
-      margin: 1em;
+      margin-bottom: 0.5em;
     }
   }
 }
