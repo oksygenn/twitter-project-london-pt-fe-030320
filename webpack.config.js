@@ -36,6 +36,10 @@ module.exports = {
       filename: "login.html",
       template: resolveAppPath("public/login.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: "tweet.html",
+      template: resolveAppPath("public/tweet.html"),
+    }),
   ],
   module: {
     rules: [

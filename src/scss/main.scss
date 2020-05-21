@@ -8,12 +8,21 @@ $theme-secondary: purple;
   margin-bottom: 1em;
 }
 
+@mixin textarea-design {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 300;
+  outline: 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  // font-size: 14px;
   line-height: 1.4em;
 }
 
@@ -145,14 +154,12 @@ header.main-page {
       display: flex;
       justify-content: space-around;
       color: grey;
-      // background-color: paleturquoise;
 
       .like-button,
       .retweet-button,
       .comment-button {
         display: flex;
         align-items: center;
-        // background-color: red;
 
         .like-quantity,
         .retweet-quantity,
@@ -164,7 +171,6 @@ header.main-page {
     }
 
     div.tweet-comment-field {
-      // display: none;
       padding: 1em;
 
       .comment-line {
@@ -172,16 +178,8 @@ header.main-page {
       }
 
       textarea {
-        display: block;
-        margin: 0 auto;
-        padding: 0.7em;
-        width: 100%;
-        height: 100px;
+        @include textarea-design;
         border: 1px solid rgb(189, 181, 181);
-        border-radius: 4px;
-        font-size: 0.9em;
-        font-weight: 300;
-        outline: 0;
       }
 
       textarea::placeholder {

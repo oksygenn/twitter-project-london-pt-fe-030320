@@ -1,0 +1,44 @@
+body.create-tweet-background {
+  height: 100vh;
+  background: url(../../public/images/main-wave.svg) left 0 top 0,
+    url(../../public/images/main-yellow-shape.svg) left 50vw top 35vh,
+    url(../../public/images/main-purple-right.svg) right 0 top 50vh,
+    url(../../public/images/main-purple-left.svg) left 0 bottom 8vh,
+    url(../../public/images/tweet-human.svg) left 50% bottom 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header.tweet-page-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+
+  input[type="submit"] {
+    background-color: $theme-primary;
+    color: $background;
+    width: 77px;
+    height: 29px;
+    border: none;
+    border-radius: 4px;
+    outline: 0;
+  }
+}
+
+.tweet-yellow-line {
+  border-bottom: 1px solid $theme-primary;
+}
+
+div.textarea {
+  padding: 1.5em;
+
+  textarea {
+    @include textarea-design;
+    border: 1px solid $theme-primary;
+    background-color: $background;
+    color: white;
+  }
+}
+textarea::placeholder {
+  color: $theme-primary;
+}
