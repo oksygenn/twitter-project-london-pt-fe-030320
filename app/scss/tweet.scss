@@ -1,10 +1,10 @@
 body.create-tweet-background {
   height: 100vh;
-  background: url(../../public/images/main-wave.svg) left 0 top 0,
-    url(../../public/images/main-yellow-shape.svg) left 50vw top 35vh,
-    url(../../public/images/main-purple-right.svg) right 0 top 50vh,
-    url(../../public/images/main-purple-left.svg) left 0 bottom 8vh,
-    url(../../public/images/tweet-human.svg) left 50% bottom 0;
+  background: url(../images/main-wave.svg) left 0 top 0,
+    url(../images/main-yellow-shape.svg) left 50vw top 35vh,
+    url(../images/main-purple-right.svg) right 0 top 50vh,
+    url(../images/main-purple-left.svg) left 0 bottom 8vh,
+    url(../images/tweet-human.svg) left 50% bottom 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
