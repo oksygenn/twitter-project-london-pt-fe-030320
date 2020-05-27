@@ -5,7 +5,7 @@ $theme-secondary: purple;
 
 @mixin line {
   border-bottom: 1px solid rgb(202, 202, 202);
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 @mixin textarea-design {
@@ -120,6 +120,7 @@ header.main-page {
   .tweet {
     background-color: white;
     width: 80vw;
+    // min-height: 200px;
     margin: 2em auto;
     padding-bottom: 1em;
     border-radius: 4px;
@@ -143,11 +144,11 @@ header.main-page {
         @include line;
       }
 
-      .hashtag {
-        margin: 0.5em 0;
-        font-size: 0.9em;
-        color: $theme-secondary;
-      }
+      // .hashtag {
+      //   margin: 0.5em 0;
+      //   font-size: 0.9em;
+      //   color: $theme-secondary;
+      // }
     }
 
     .tweet-buttons {
@@ -171,7 +172,7 @@ header.main-page {
     }
 
     div.tweet-comment-field {
-      padding: 1em;
+      padding: 0 1em;
 
       .comment-line {
         @include line;

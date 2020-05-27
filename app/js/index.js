@@ -16,6 +16,8 @@ const loadTweets = async () => {
 };
 loadTweets();
 
+const renderTweets = () => {};
+
 const createTweet = () => {
   for (let obj of tweets) {
     const tweetDiv = document.createElement("div");
@@ -64,5 +66,11 @@ const createTweet = () => {
   </div>
 `;
     tweetsContainer.appendChild(tweetDiv);
+
+    const commentBtn = tweetDiv.querySelector(".comment-button");
+    const commentField = tweetDiv.querySelector("div .tweet-comment-field");
+    commentBtn.addEventListener("click", () => {
+      commentField.classList.toggle("hidden");
+    });
   }
 };

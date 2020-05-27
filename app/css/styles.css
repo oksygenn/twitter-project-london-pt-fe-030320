@@ -90,11 +90,7 @@ header.main-page {
       font-weight: 200; }
       .tweets-container .tweet .tweet-body .tweet-line {
         border-bottom: 1px solid #cacaca;
-        margin-bottom: 1em; }
-      .tweets-container .tweet .tweet-body .hashtag {
-        margin: 0.5em 0;
-        font-size: 0.9em;
-        color: purple; }
+        margin: 1em 0; }
     .tweets-container .tweet .tweet-buttons {
       display: flex;
       justify-content: space-around;
@@ -116,10 +112,10 @@ header.main-page {
           font-size: 0.8em;
           padding: 0.3em; }
     .tweets-container .tweet div.tweet-comment-field {
-      padding: 1em; }
+      padding: 0 1em; }
       .tweets-container .tweet div.tweet-comment-field .comment-line {
         border-bottom: 1px solid #cacaca;
-        margin-bottom: 1em; }
+        margin: 1em 0; }
       .tweets-container .tweet div.tweet-comment-field textarea {
         display: block;
         margin: 0 auto;
