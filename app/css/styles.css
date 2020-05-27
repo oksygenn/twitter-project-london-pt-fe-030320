@@ -144,6 +144,9 @@ header.main-page {
           border-radius: 4px;
           outline: 0; }
 
+.hidden {
+  display: none; }
+
 body.login {
   background-color: black;
   text-align: center; }
@@ -187,7 +190,8 @@ form {
     font-size: 0.8em;
     margin: 1em;
     padding: 0.2em;
-    color: #ffffff; }
+    color: #ffffff;
+    outline: 0; }
   form .login-button {
     background-color: #e7e417;
     width: 120px;
@@ -195,7 +199,8 @@ form {
     border: none;
     border-radius: 5%;
     font-size: 1em;
-    font-weight: 600; }
+    font-weight: 600;
+    outline: 0; }
   form ::placeholder {
     display: inline-block;
     font-size: 0.8em;

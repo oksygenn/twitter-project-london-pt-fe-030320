@@ -54,6 +54,7 @@ form {
     margin: 1em;
     padding: 0.2em;
     color: $content-background;
+    outline: 0;
   }
 
   .login-button {
@@ -64,6 +65,7 @@ form {
     border-radius: 5%;
     font-size: 1em;
     font-weight: 600;
+    outline: 0;
   }
 
   ::placeholder {

@@ -15,7 +15,7 @@ const Q = () => {
       localStorage.setUserID(user.id);
       window.location.replace("./index.html");
     } else {
-      console.log("User not found!");
+      alert("User not found!");
     }
   });
 };
