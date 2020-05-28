@@ -143,12 +143,6 @@ header.main-page {
       .tweet-line {
         @include line;
       }
-
-      // .hashtag {
-      //   margin: 0.5em 0;
-      //   font-size: 0.9em;
-      //   color: $theme-secondary;
-      // }
     }
 
     .tweet-buttons {
@@ -207,6 +201,7 @@ header.main-page {
   }
 }
 
-.hidden {
+.hidden,
+.template {
   display: none;
 }
