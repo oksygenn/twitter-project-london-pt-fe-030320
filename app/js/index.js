@@ -8,13 +8,13 @@ let tweets = [];
 const loadTweets = async () => {
   if (localStorage.isUserLoggedIn()) {
     tweets = await API.getTweets();
-    createTweet();
+    createTweetDiv();
   } else {
     window.location.replace("./login.html");
   }
 };
 
-const createTweet = () => {
+const createTweetDiv = () => {
   for (let obj of tweets) {
     const template = document.querySelector(".tweet");
     const tweetDiv = template.cloneNode(true);
@@ -32,6 +32,12 @@ const createTweet = () => {
     commentBtn.addEventListener("click", () => {
       commentField.classList.toggle("hidden");
     });
+    const commentBody = tweetDiv.querySelector(".comment-body");
+    const replyButton = tweetDiv.querySelector(".reply-to-tweet");
+
+    replyButton.addEventListener("click", () => {
+      API.postComment(userId, obj.id, commentBody.value);
+    });
   }
 };
 
@@ -44,5 +50,6 @@ const setUserName = async () => {
   name.innerHTML = `${user.name}`;
   userNameDiv.appendChild(name);
 };
+
 loadTweets();
 setUserName();
