@@ -5,7 +5,7 @@ const TWEETS_URL = `${API_ENDPOINT}/tweets?_expand=user&_embed=comments`;
 const getTweets = async () => fetch(TWEETS_URL).then((res) => res.json());
 const getUsers = async () => fetch(USERS_URL).then((res) => res.json());
 
-const postComment = async (userID, tweetID, usersComment) => {
+const postComment = async (userID, tweetID, newComment) => {
   const configObject = {
     method: "POST",
     headers: {
@@ -15,7 +15,7 @@ const postComment = async (userID, tweetID, usersComment) => {
     body: JSON.stringify({
       userId: userID,
       tweetId: tweetID,
-      content: usersComment,
+      content: newComment,
     }),
   };
 
