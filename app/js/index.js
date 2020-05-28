@@ -2,21 +2,17 @@ import API from "./API.js";
 import localStorage from "./localStorage.js";
 const tweetsContainer = document.querySelector(".tweets-container");
 
-let userId;
+const userId = localStorage.getUserID();
 let tweets = [];
 
 const loadTweets = async () => {
   if (localStorage.isUserLoggedIn()) {
-    userId = localStorage.getUserID();
     tweets = await API.getTweets();
     createTweet();
   } else {
     window.location.replace("./login.html");
   }
 };
-loadTweets();
-
-const renderTweets = () => {};
 
 const createTweet = () => {
   for (let obj of tweets) {
@@ -74,3 +70,15 @@ const createTweet = () => {
     });
   }
 };
+
+const setUserName = async () => {
+  let users = await API.getUsers();
+  const userNameDiv = document.querySelector(".user-full-name");
+  const name = document.createElement("h3");
+  name.className = "full-name";
+  const user = users.find((user) => user.id === userId);
+  name.innerHTML = `${user.name}`;
+  userNameDiv.appendChild(name);
+};
+loadTweets();
+setUserName();

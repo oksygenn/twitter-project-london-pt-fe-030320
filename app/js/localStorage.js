@@ -2,7 +2,7 @@ const localStorage = window.localStorage;
 const userIDKey = "userID";
 
 const getUserID = () => {
-  return localStorage.getItem(userIDKey);
+  return parseInt(localStorage.getItem(userIDKey));
 };
 
 const setUserID = (userId) => {

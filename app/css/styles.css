@@ -38,20 +38,20 @@ header.main-page {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-  header.main-page div.details {
+  header.main-page div.user-details {
     display: flex;
     flex-direction: column;
     width: 60%; }
-    header.main-page div.details ul.details-extra {
+    header.main-page div.user-details ul.details-extra {
       display: grid;
       grid-template-columns: auto auto;
       font-size: 0.8em; }
-      header.main-page div.details ul.details-extra .user-info {
+      header.main-page div.user-details ul.details-extra .user-info {
         font-style: italic; }
-      header.main-page div.details ul.details-extra li {
+      header.main-page div.user-details ul.details-extra li {
         padding: 0.5em 0;
         list-style: none; }
-        header.main-page div.details ul.details-extra li span.bold-numbers {
+        header.main-page div.user-details ul.details-extra li span.bold-numbers {
           font-weight: 700; }
   header.main-page .header-purple-hr-line {
     border-bottom: 1px solid purple;
