@@ -22,8 +22,7 @@ const createTweetDiv = () => {
     tweetDiv.querySelector(".tweet-name").innerHTML = obj.user.name;
     tweetDiv.querySelector(".tweet-date").innerHTML = obj.date;
     tweetDiv.querySelector(".tweet-content").innerHTML = obj.content;
-    const likeQuantity = (tweetDiv.querySelector(".like-quantity").innerHTML =
-      obj.likes);
+    tweetDiv.querySelector(".like-quantity").innerHTML = obj.likes;
     tweetDiv.querySelector(".retweet-quantity").innerHTML = obj.retweets;
     const commentQuantityDiv = tweetDiv.querySelector(".comment-quantity");
     commentQuantityDiv.innerHTML = obj.comments.length;
