@@ -39,17 +39,22 @@ const createTweetDiv = () => {
     const replyButton = tweetDiv.querySelector(".reply-to-tweet");
 
     replyButton.addEventListener("click", async () => {
-      try {
-        await API.postComment(userId, obj.id, commentBody.value);
-        commentBody.value = "";
-        commentField.classList.toggle("hidden");
-        commentQuantityDiv.innerHTML = obj.comments.length + 1;
-      } catch {
-        /*reject*/
+      if (commentBody.value === "") {
+        return;
+      } else {
+        try {
+          await API.postComment(userId, obj.id, commentBody.value);
+          commentBody.value = "";
+          commentField.classList.toggle("hidden");
+          commentQuantityDiv.innerText =
+            parseInt(commentQuantityDiv.innerText) + 1;
+        } catch {
+          /*reject*/
+        }
       }
     });
 
-    changeImg(tweetDiv);
+    setUpCounters(tweetDiv);
   }
 };
 
@@ -63,8 +68,8 @@ const setUserName = async () => {
   userNameDiv.appendChild(name);
 };
 
-const changeImg = (tweetDiv, tweetObj) => {
-  const buttons = tweetDiv.querySelectorAll(".button");
+const setUpCounters = (tweetDiv) => {
+  const buttons = tweetDiv.querySelectorAll(".counter-btn");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
