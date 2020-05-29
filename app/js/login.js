@@ -4,7 +4,7 @@ import localStorage from "./localStorage.js";
 const inputForm = document.querySelector(".login-form");
 const userName = document.querySelector(".username");
 
-const Q = () => {
+const loginUser = () => {
   inputForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -20,4 +20,4 @@ const Q = () => {
   });
 };
 
-Q();
+loginUser();

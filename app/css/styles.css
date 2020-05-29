@@ -91,54 +91,57 @@ header.main-page {
       .tweets-container .tweet .tweet-body .tweet-line {
         border-bottom: 1px solid #cacaca;
         margin: 1em 0; }
-    .tweets-container .tweet .tweet-buttons {
-      display: flex;
-      justify-content: space-around;
-      color: grey; }
-      .tweets-container .tweet .tweet-buttons .like-button,
-      .tweets-container .tweet .tweet-buttons .retweet-button,
-      .tweets-container .tweet .tweet-buttons .comment-button {
-        display: flex;
-        align-items: center; }
-        .tweets-container .tweet .tweet-buttons .like-button .like-quantity,
-        .tweets-container .tweet .tweet-buttons .like-button .retweet-quantity,
-        .tweets-container .tweet .tweet-buttons .like-button .comment-quantity,
-        .tweets-container .tweet .tweet-buttons .retweet-button .like-quantity,
-        .tweets-container .tweet .tweet-buttons .retweet-button .retweet-quantity,
-        .tweets-container .tweet .tweet-buttons .retweet-button .comment-quantity,
-        .tweets-container .tweet .tweet-buttons .comment-button .like-quantity,
-        .tweets-container .tweet .tweet-buttons .comment-button .retweet-quantity,
-        .tweets-container .tweet .tweet-buttons .comment-button .comment-quantity {
-          font-size: 0.8em;
-          padding: 0.3em; }
-    .tweets-container .tweet div.tweet-comment-field {
-      padding: 0 1em; }
-      .tweets-container .tweet div.tweet-comment-field .comment-line {
-        border-bottom: 1px solid #cacaca;
-        margin: 1em 0; }
-      .tweets-container .tweet div.tweet-comment-field textarea {
-        display: block;
-        margin: 0 auto;
-        padding: 0.7em;
-        border-radius: 4px;
-        font-size: 0.9em;
-        font-weight: 300;
-        outline: 0;
-        border: 1px solid #bdb5b5; }
-      .tweets-container .tweet div.tweet-comment-field textarea::placeholder {
-        color: grey; }
-      .tweets-container .tweet div.tweet-comment-field .tweet-comment-buttons {
-        position: relative; }
-        .tweets-container .tweet div.tweet-comment-field .tweet-comment-buttons input[type="submit"] {
-          position: absolute;
-          right: 0;
-          background-color: black;
-          color: #e7e417;
-          width: 77px;
-          height: 29px;
-          border: none;
-          border-radius: 4px;
-          outline: 0; }
+
+.tweet-buttons {
+  display: flex;
+  justify-content: space-around;
+  color: grey; }
+  .tweet-buttons .button {
+    display: flex;
+    align-items: center; }
+  .tweet-buttons .quantity {
+    font-size: 0.8em;
+    padding: 0.3em; }
+  .tweet-buttons .button::before {
+    position: relative;
+    bottom: -2px; }
+  .tweet-buttons .like-button::before {
+    content: url(../images/heart.svg); }
+  .tweet-buttons .like-button.filled::before {
+    content: url(../images/like-purple.svg); }
+  .tweet-buttons .retweet-button::before {
+    content: url(../images/retweet.svg); }
+  .tweet-buttons .retweet-button.filled::before {
+    content: url(../images/retweet-purple.svg); }
+
+div.tweet-comment-field {
+  padding: 0 1em; }
+  div.tweet-comment-field .comment-line {
+    border-bottom: 1px solid #cacaca;
+    margin: 1em 0; }
+  div.tweet-comment-field textarea {
+    display: block;
+    margin: 0 auto;
+    padding: 0.7em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 300;
+    outline: 0;
+    border: 1px solid #bdb5b5; }
+  div.tweet-comment-field textarea::placeholder {
+    color: grey; }
+  div.tweet-comment-field .tweet-comment-buttons {
+    position: relative; }
+    div.tweet-comment-field .tweet-comment-buttons input[type="submit"] {
+      position: absolute;
+      right: 0;
+      background-color: black;
+      color: #e7e417;
+      width: 77px;
+      height: 29px;
+      border: none;
+      border-radius: 4px;
+      outline: 0; }
 
 .hidden,
 .template {

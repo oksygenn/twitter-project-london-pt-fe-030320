@@ -144,59 +144,77 @@ header.main-page {
         @include line;
       }
     }
+  }
+}
 
-    .tweet-buttons {
-      display: flex;
-      justify-content: space-around;
-      color: grey;
+.tweet-buttons {
+  display: flex;
+  justify-content: space-around;
+  // position: relative;
+  color: grey;
 
-      .like-button,
-      .retweet-button,
-      .comment-button {
-        display: flex;
-        align-items: center;
+  .button {
+    display: flex;
+    align-items: center;
+  }
 
-        .like-quantity,
-        .retweet-quantity,
-        .comment-quantity {
-          font-size: 0.8em;
-          padding: 0.3em;
-        }
-      }
-    }
+  .quantity {
+    font-size: 0.8em;
+    padding: 0.3em;
+  }
 
-    div.tweet-comment-field {
-      padding: 0 1em;
+  .button::before {
+    position: relative;
+    bottom: -2px;
+  }
 
-      .comment-line {
-        @include line;
-      }
+  .like-button::before {
+    content: url(../images/heart.svg);
+  }
 
-      textarea {
-        @include textarea-design;
-        border: 1px solid rgb(189, 181, 181);
-      }
+  .like-button.filled::before {
+    content: url(../images/like-purple.svg);
+  }
 
-      textarea::placeholder {
-        color: grey;
-      }
+  .retweet-button::before {
+    content: url(../images/retweet.svg);
+  }
 
-      .tweet-comment-buttons {
-        position: relative;
+  .retweet-button.filled::before {
+    content: url(../images/retweet-purple.svg);
+  }
+}
 
-        input[type="submit"] {
-          position: absolute;
-          right: 0;
-          background-color: $background;
-          color: $theme-primary;
-          width: 77px;
-          height: 29px;
-          border: none;
-          border-radius: 4px;
-          outline: 0;
-          // cursor: pointer;
-        }
-      }
+div.tweet-comment-field {
+  padding: 0 1em;
+
+  .comment-line {
+    @include line;
+  }
+
+  textarea {
+    @include textarea-design;
+    border: 1px solid rgb(189, 181, 181);
+  }
+
+  textarea::placeholder {
+    color: grey;
+  }
+
+  .tweet-comment-buttons {
+    position: relative;
+
+    input[type="submit"] {
+      position: absolute;
+      right: 0;
+      background-color: $background;
+      color: $theme-primary;
+      width: 77px;
+      height: 29px;
+      border: none;
+      border-radius: 4px;
+      outline: 0;
+      // cursor: pointer;
     }
   }
 }

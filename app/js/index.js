@@ -22,7 +22,8 @@ const createTweetDiv = () => {
     tweetDiv.querySelector(".tweet-name").innerHTML = obj.user.name;
     tweetDiv.querySelector(".tweet-date").innerHTML = obj.date;
     tweetDiv.querySelector(".tweet-content").innerHTML = obj.content;
-    tweetDiv.querySelector(".like-quantity").innerHTML = obj.likes;
+    const likeQuantity = (tweetDiv.querySelector(".like-quantity").innerHTML =
+      obj.likes);
     tweetDiv.querySelector(".retweet-quantity").innerHTML = obj.retweets;
     const commentQuantityDiv = tweetDiv.querySelector(".comment-quantity");
     commentQuantityDiv.innerHTML = obj.comments.length;
@@ -34,6 +35,7 @@ const createTweetDiv = () => {
     commentBtn.addEventListener("click", () => {
       commentField.classList.toggle("hidden");
     });
+
     const commentBody = tweetDiv.querySelector(".comment-body");
     const replyButton = tweetDiv.querySelector(".reply-to-tweet");
 
@@ -60,5 +62,15 @@ const setUserName = async () => {
   userNameDiv.appendChild(name);
 };
 
+// const changeImg = () => {
+//   const button = document.querySelector(".button");
+//   const quantity = document.querySelector(".quantity");
+
+//   button.addEventListener("click", () => {
+//     button.classList.toggle("filled");
+//   });
+// };
+
+// changeImg();
 loadTweets();
 setUserName();
