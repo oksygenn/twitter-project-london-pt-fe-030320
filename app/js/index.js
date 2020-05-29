@@ -48,6 +48,8 @@ const createTweetDiv = () => {
         /*reject*/
       }
     });
+
+    changeImg(tweetDiv);
   }
 };
 
@@ -61,15 +63,22 @@ const setUserName = async () => {
   userNameDiv.appendChild(name);
 };
 
-// const changeImg = () => {
-//   const button = document.querySelector(".button");
-//   const quantity = document.querySelector(".quantity");
+const changeImg = (tweetDiv, tweetObj) => {
+  const buttons = tweetDiv.querySelectorAll(".button");
 
-//   button.addEventListener("click", () => {
-//     button.classList.toggle("filled");
-//   });
-// };
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const quantity = button.querySelector(".quantity");
 
-// changeImg();
+      if (button.classList.contains("filled")) {
+        quantity.innerText = parseInt(quantity.innerText) - 1;
+      } else {
+        quantity.innerText = parseInt(quantity.innerText) + 1;
+      }
+      button.classList.toggle("filled");
+    });
+  });
+};
+
 loadTweets();
 setUserName();
