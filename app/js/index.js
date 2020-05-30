@@ -48,8 +48,8 @@ const createTweetDiv = () => {
           commentField.classList.toggle("hidden");
           commentQuantityDiv.innerText =
             parseInt(commentQuantityDiv.innerText) + 1;
-        } catch {
-          /*reject*/
+        } catch (err) {
+          console.log(err); /*change me!!!!!!!!!!!!!!!!!!!!!*/
         }
       }
     });
@@ -85,5 +85,13 @@ const setUpCounters = (tweetDiv) => {
   });
 };
 
+const createNewTweet = () => {
+  const newTweetBtn = document.querySelector(".new-tweet-icon");
+  newTweetBtn.addEventListener("click", () => {
+    window.location.replace("./new_tweet.html");
+  });
+};
+
 loadTweets();
 setUserName();
+createNewTweet();
