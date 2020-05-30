@@ -183,6 +183,10 @@ header.main-page {
   .retweet-button.filled::before {
     content: url(../images/retweet-purple.svg);
   }
+
+  .purple {
+    color: #dd00f0;
+  }
 }
 
 div.tweet-comment-field {

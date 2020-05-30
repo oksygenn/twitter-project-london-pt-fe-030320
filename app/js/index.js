@@ -8,6 +8,7 @@ let tweets = [];
 const loadTweets = async () => {
   if (localStorage.isUserLoggedIn()) {
     tweets = await API.getTweets();
+    tweets = tweets.reverse();
     createTweetDiv();
   } else {
     window.location.replace("./login.html");
@@ -22,8 +23,8 @@ const createTweetDiv = () => {
     tweetDiv.querySelector(".tweet-name").innerHTML = obj.user.name;
     tweetDiv.querySelector(".tweet-date").innerHTML = obj.date;
     tweetDiv.querySelector(".tweet-content").innerHTML = obj.content;
-    tweetDiv.querySelector(".like-quantity").innerHTML = obj.likes;
-    tweetDiv.querySelector(".retweet-quantity").innerHTML = obj.retweets;
+    tweetDiv.querySelector(".like-quantity").innerHTML = obj.likes || 0;
+    tweetDiv.querySelector(".retweet-quantity").innerHTML = obj.retweets || 0;
     const commentQuantityDiv = tweetDiv.querySelector(".comment-quantity");
     commentQuantityDiv.innerHTML = obj.comments.length;
 
@@ -32,7 +33,8 @@ const createTweetDiv = () => {
     const commentBtn = tweetDiv.querySelector(".comment-button");
     const commentField = tweetDiv.querySelector("div .tweet-comment-field");
     commentBtn.addEventListener("click", () => {
-      commentField.classList.toggle("hidden");
+      // commentField.classList.toggle("hidden");
+      toggling(commentField, "hidden");
     });
 
     const commentBody = tweetDiv.querySelector(".comment-body");
@@ -45,11 +47,12 @@ const createTweetDiv = () => {
         try {
           await API.postComment(userId, obj.id, commentBody.value);
           commentBody.value = "";
-          commentField.classList.toggle("hidden");
+          // commentField.classList.toggle("hidden");
+          toggling(commentField, "hidden");
           commentQuantityDiv.innerText =
             parseInt(commentQuantityDiv.innerText) + 1;
-        } catch (err) {
-          console.log(err); /*change me!!!!!!!!!!!!!!!!!!!!!*/
+        } catch {
+          alert("Oops! Tweet failed to post :( Please try again");
         }
       }
     });
@@ -68,6 +71,10 @@ const setUserName = async () => {
   userNameDiv.appendChild(name);
 };
 
+const toggling = (elem, classToToggle) => {
+  elem.classList.toggle(classToToggle);
+};
+
 const setUpCounters = (tweetDiv) => {
   const buttons = tweetDiv.querySelectorAll(".counter-btn");
 
@@ -77,15 +84,18 @@ const setUpCounters = (tweetDiv) => {
 
       if (button.classList.contains("filled")) {
         quantity.innerText = parseInt(quantity.innerText) - 1;
+        toggling(quantity, "purple");
       } else {
         quantity.innerText = parseInt(quantity.innerText) + 1;
+        toggling(quantity, "purple");
       }
-      button.classList.toggle("filled");
+      // button.classList.toggle("filled");
+      toggling(button, "filled");
     });
   });
 };
 
-const createNewTweet = () => {
+const setUpNewTweet = () => {
   const newTweetBtn = document.querySelector(".new-tweet-icon");
   newTweetBtn.addEventListener("click", () => {
     window.location.replace("./new_tweet.html");
@@ -94,4 +104,4 @@ const createNewTweet = () => {
 
 loadTweets();
 setUserName();
-createNewTweet();
+setUpNewTweet();
