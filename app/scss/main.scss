@@ -10,6 +10,7 @@ $theme-secondary: purple;
 
 @mixin textarea-design {
   display: block;
+  width: 100%;
   margin: 0 auto;
   padding: 0.7em;
   border-radius: 4px;
@@ -199,6 +200,7 @@ div.tweet-comment-field {
   textarea {
     @include textarea-design;
     border: 1px solid rgb(189, 181, 181);
+    height: 15vh;
   }
 
   textarea::placeholder {

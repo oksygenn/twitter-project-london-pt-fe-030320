@@ -123,13 +123,15 @@ div.tweet-comment-field {
     margin: 1em 0; }
   div.tweet-comment-field textarea {
     display: block;
+    width: 100%;
     margin: 0 auto;
     padding: 0.7em;
     border-radius: 4px;
     font-size: 0.9em;
     font-weight: 300;
     outline: 0;
-    border: 1px solid #bdb5b5; }
+    border: 1px solid #bdb5b5;
+    height: 15vh; }
   div.tweet-comment-field textarea::placeholder {
     color: grey; }
   div.tweet-comment-field .tweet-comment-buttons {
@@ -234,12 +236,14 @@ div.textarea {
   padding: 1.5em; }
   div.textarea textarea {
     display: block;
+    width: 100%;
     margin: 0 auto;
     padding: 0.7em;
     border-radius: 4px;
     font-size: 0.9em;
     font-weight: 300;
     outline: 0;
+    height: 20vh;
     border: 1px solid #e7e417;
     background-color: black;
     color: white; }

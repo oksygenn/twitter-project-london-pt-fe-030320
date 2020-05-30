@@ -4,6 +4,7 @@ import localStorage from "./localStorage.js";
 const userId = localStorage.getUserID();
 const tweetButton = document.querySelector(".tweet-btn");
 const tweetText = document.querySelector("textarea.new-tweet-text");
+const goBackBtn = document.querySelector(".go-back");
 
 const createNewTweet = () => {
   tweetButton.addEventListener("click", async () => {
@@ -20,4 +21,11 @@ const createNewTweet = () => {
   });
 };
 
+const goBackToMain = () => {
+  goBackBtn.addEventListener("click", () => {
+    window.location.replace("./index.html");
+  });
+};
+
 createNewTweet();
+goBackToMain();

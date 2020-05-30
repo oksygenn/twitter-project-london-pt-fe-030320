@@ -34,6 +34,7 @@ div.textarea {
 
   textarea {
     @include textarea-design;
+    height: 20vh;
     border: 1px solid $theme-primary;
     background-color: $background;
     color: white;
