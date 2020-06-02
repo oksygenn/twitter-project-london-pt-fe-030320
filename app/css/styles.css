@@ -8,7 +8,7 @@
 
 body.main-default-background {
   height: 100vh;
-  background: url(../images/main-wave.svg) left 0 top 0, url(../images/main-yellow-shape.svg) left 50vw top 40vh, url(../images/main-purple-right.svg) right 0 top 50vh, url(../images/main-purple-left.svg) left 0 bottom 8vh, url(../images/main-human.svg) left 0 bottom 30vh;
+  background: url(../images/main-wave.svg) left 0 top 0, url(../images/main-yellow-shape.svg) left 50% top 40%, url(../images/main-purple-right.svg) right 0 top 55%, url(../images/main-purple-left.svg) left 0 bottom 8%, url(../images/main-human.svg) left 0 bottom 30%;
   background-attachment: fixed;
   background-repeat: no-repeat; }
   body.main-default-background .new-tweet-icon {
@@ -28,16 +28,21 @@ header.main-page {
   background-color: black; }
   header.main-page .main-icon {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 80px;
+    height: 80px;
     background-color: #e7e417;
     clip-path: circle(49% at center);
     margin: 0 2em; }
-    header.main-page .main-icon .camera {
+    header.main-page .main-icon .user-pic {
+      width: 80px;
+      height: 80px; }
+    header.main-page .main-icon .choose-file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      z-index: -1; }
   header.main-page div.user-details {
     display: flex;
     flex-direction: column;
@@ -243,7 +248,7 @@ div.textarea {
     font-size: 0.9em;
     font-weight: 300;
     outline: 0;
-    height: 20vh;
+    height: 18vh;
     border: 1px solid #e7e417;
     background-color: black;
     color: white; }

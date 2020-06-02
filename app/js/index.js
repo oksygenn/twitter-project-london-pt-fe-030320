@@ -5,6 +5,10 @@ const tweetsContainer = document.querySelector(".tweets-container");
 const userId = localStorage.getUserID();
 let tweets = [];
 
+const toggling = (elem, classToToggle) => {
+  elem.classList.toggle(classToToggle);
+};
+
 const loadTweets = async () => {
   if (localStorage.isUserLoggedIn()) {
     tweets = await API.getTweets();
@@ -47,7 +51,6 @@ const createTweetDiv = () => {
         try {
           await API.postComment(userId, obj.id, commentBody.value);
           commentBody.value = "";
-          // commentField.classList.toggle("hidden");
           toggling(commentField, "hidden");
           commentQuantityDiv.innerText =
             parseInt(commentQuantityDiv.innerText) + 1;
@@ -69,10 +72,9 @@ const setUserName = async () => {
   const user = users.find((user) => user.id === userId);
   name.innerHTML = `${user.name}`;
   userNameDiv.appendChild(name);
-};
 
-const toggling = (elem, classToToggle) => {
-  elem.classList.toggle(classToToggle);
+  const userImg = document.querySelector(".user-pic");
+  userImg.src = user.avatar_url;
 };
 
 const setUpCounters = (tweetDiv) => {
@@ -102,6 +104,26 @@ const setUpNewTweet = () => {
   });
 };
 
+const setupImageUpload = () => {
+  const avatarImg = document.querySelector(".user-pic");
+  const input = document.querySelector("input[type=file]");
+  avatarImg.addEventListener("click", () => {
+    input.click();
+  });
+  input.addEventListener("change", () => {
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload;
+    reader.onload = (function (aImg) {
+      return function (e) {
+        avatarImg.src = e.target.result;
+      };
+    })(file);
+    reader.readAsDataURL(file);
+  });
+};
+
 loadTweets();
 setUserName();
 setUpNewTweet();
+setupImageUpload();

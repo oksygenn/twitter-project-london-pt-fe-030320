@@ -30,10 +30,10 @@ $theme-secondary: purple;
 body.main-default-background {
   height: 100vh;
   background: url(../images/main-wave.svg) left 0 top 0,
-    url(../images/main-yellow-shape.svg) left 50vw top 40vh,
-    url(../images/main-purple-right.svg) right 0 top 50vh,
-    url(../images/main-purple-left.svg) left 0 bottom 8vh,
-    url(../images/main-human.svg) left 0 bottom 30vh;
+    url(../images/main-yellow-shape.svg) left 50% top 40%,
+    url(../images/main-purple-right.svg) right 0 top 55%,
+    url(../images/main-purple-left.svg) left 0 bottom 8%,
+    url(../images/main-human.svg) left 0 bottom 30%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
@@ -57,17 +57,24 @@ header.main-page {
 
   .main-icon {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 80px;
+    height: 80px;
     background-color: $theme-primary;
     clip-path: circle(49% at center);
     margin: 0 2em;
 
-    .camera {
+    .user-pic {
+      width: 80px;
+      height: 80px;
+    }
+
+    .choose-file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      z-index: -1;
     }
   }
 
