@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Twitter</title>
+  </head>
+  <body class="main-default-background">
+    <header class="main-page">
+      <div class="main-icon">
+        <img src="" class="user-pic" />
+        <label for="file-upload" class="choose-file">
+          <input class="" type="file" id="file-upload" name="file-upload" />
+        </label>
+      </div>
+      <div class="user-details">
+        <div class="user-full-name"></div>
+        <ul class="details-extra">
+          <li class="user-info">@codersinhoods</li>
+          <li class="user-info">London, UK</li>
+          <li class="followers">
+            <span class="bold-numbers">0</span> Followers
+          </li>
+          <li class="following">
+            <span class="bold-numbers">0</span> Following
+          </li>
+        </ul>
+        <div class="header-purple-hr-line"></div>
+        <div class="header-grey-hr-line"></div>
+      </div>
+    </header>
+
+    <div class="tweets-container">
+      <div class="tweet template">
+        <div class="tweet-header">
+          <h4 class="tweet-name"></h4>
+          <p class="tweet-date"></p>
+        </div>
+        <div class="tweet-body">
+          <p class="tweet-content"></p>
+          <div class="tweet-line"></div>
+        </div>
+        <div class="tweet-footer">
+          <div class="tweet-buttons">
+            <div class="like-button button counter-btn">
+              <p class="like-quantity quantity"></p>
+            </div>
+            <div class="retweet-button button counter-btn">
+              <p class="retweet-quantity quantity">0</p>
+            </div>
+            <div class="comment-button button">
+              <img src="images/comment.svg" alt="comment icon" />
+              <p class="comment-quantity quantity">0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tweet-comment-field hidden">
+          <div class="comment-line"></div>
+          <textarea
+            class="comment-body"
+            type="text"
+            placeholder="Leave your comment here"
+          ></textarea
+          ><br />
+          <div class="tweet-comment-buttons">
+            <img src="images/back-arrow.svg" alt="" />
+            <input type="submit" class="reply-to-tweet" value="Reply" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="new-tweet-icon">
+      <img src="images/tweet-new.svg" alt="create new tweet button" />
+    </div>
+  </body>
+  <script type="module" src="./js/index.js"></script>
+</html>
