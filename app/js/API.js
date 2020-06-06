@@ -5,6 +5,16 @@ const TWEETS_URL = `${API_ENDPOINT}/tweets?_expand=user&_embed=comments`;
 const getTweets = async () => fetch(TWEETS_URL).then((res) => res.json());
 const getUsers = async () => fetch(USERS_URL).then((res) => res.json());
 
+const getTweet = async (tweetID) =>
+  fetch(
+    `${API_ENDPOINT}/tweets/${tweetID}?_expand=user&_embed=comments`
+  ).then((res) => res.json());
+
+const getCommentsForTweet = async (tweetID) =>
+  fetch(`${API_ENDPOINT}/tweets/${tweetID}/comments?_expand=user`).then((res) =>
+    res.json()
+  );
+
 const formattedDate = () => {
   const date = new Date();
   const dd = date.getDate();
@@ -55,4 +65,6 @@ export default {
   getUsers,
   postComment,
   postTweet,
+  getTweet,
+  getCommentsForTweet,
 };

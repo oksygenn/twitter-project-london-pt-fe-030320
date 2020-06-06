@@ -306,7 +306,8 @@ main.comments-background {
   background-color: #e7e417; }
 
 .background-textarea {
-  background-color: black; }
+  background-color: black;
+  color: white; }
 
 .relative {
   position: relative;
@@ -361,6 +362,10 @@ main.comments-background {
   height: 50px;
   background-color: #e7e417;
   clip-path: circle(49% at center); }
+
+.user-pic {
+  width: 70px;
+  height: 70px; }
 
 .comment-text {
   margin: 1em auto; }

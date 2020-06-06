@@ -43,6 +43,7 @@ main.comments-background {
 
 .background-textarea {
   background-color: $background;
+  color: white;
 }
 
 .relative {
@@ -109,10 +110,10 @@ main.comments-background {
   clip-path: circle(49% at center);
 }
 
-// .comment-user-pic {
-//   width: 60px;
-//   height: 60px;
-// }
+.user-pic {
+  width: 70px;
+  height: 70px;
+}
 
 .comment-text {
   margin: 1em auto;
