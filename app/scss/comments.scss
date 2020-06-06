@@ -1,6 +1,6 @@
 body.comments-body {
   background-color: $background;
-  // text-align: center;
+  color: white;
 }
 
 main.comments-background {
@@ -47,6 +47,7 @@ main.comments-background {
 
 .relative {
   position: relative;
+  margin-bottom: 0.6em;
 }
 
 .tweet-page {
@@ -68,7 +69,8 @@ main.comments-background {
   }
 }
 
-.tweet-user-details {
+.comment-user-details {
+  margin: 0 1em;
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -78,4 +80,46 @@ main.comments-background {
 .tweet-content-color {
   color: white;
   font-weight: 200;
+}
+
+.comments-wrapper {
+  width: 80vw;
+  height: 100vh;
+  background-color: transparent;
+  margin: 2em auto;
+  padding: 1em;
+  font-size: 0.8em;
+}
+
+.header-comments {
+  margin-bottom: 1em;
+}
+
+.comment-mini-header {
+  display: flex;
+  width: 60vw;
+  font-size: 0.8em;
+  padding-top: 1em;
+}
+
+.comment-mini-icon {
+  width: 50px;
+  height: 50px;
+  background-color: $theme-primary;
+  clip-path: circle(49% at center);
+}
+
+// .comment-user-pic {
+//   width: 60px;
+//   height: 60px;
+// }
+
+.comment-text {
+  margin: 1em auto;
+}
+
+.new-comment-icon > img {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
 }

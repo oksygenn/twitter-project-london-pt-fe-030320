@@ -95,7 +95,7 @@ header.main-page {
       font-size: 14px;
       font-weight: 300; }
     .tweets-container .tweet .tweet-body {
-      padding: 0.8em 1.3em 0 1.3em;
+      padding: 1em 1.3em 0 1.3em;
       font-weight: 200; }
 
 .tweet-line {
@@ -273,7 +273,8 @@ textarea::placeholder {
   color: #e7e417; }
 
 body.comments-body {
-  background-color: black; }
+  background-color: black;
+  color: white; }
 
 main.comments-background {
   height: 100vh;
@@ -308,7 +309,8 @@ main.comments-background {
   background-color: black; }
 
 .relative {
-  position: relative; }
+  position: relative;
+  margin-bottom: 0.6em; }
 
 .tweet-page {
   display: flex;
@@ -326,7 +328,8 @@ main.comments-background {
     clip-path: circle(49% at center);
     margin: 0 2em; }
 
-.tweet-user-details {
+.comment-user-details {
+  margin: 0 1em;
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -335,3 +338,34 @@ main.comments-background {
 .tweet-content-color {
   color: white;
   font-weight: 200; }
+
+.comments-wrapper {
+  width: 80vw;
+  height: 100vh;
+  background-color: transparent;
+  margin: 2em auto;
+  padding: 1em;
+  font-size: 0.8em; }
+
+.header-comments {
+  margin-bottom: 1em; }
+
+.comment-mini-header {
+  display: flex;
+  width: 60vw;
+  font-size: 0.8em;
+  padding-top: 1em; }
+
+.comment-mini-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e7e417;
+  clip-path: circle(49% at center); }
+
+.comment-text {
+  margin: 1em auto; }
+
+.new-comment-icon > img {
+  position: fixed;
+  bottom: 2em;
+  right: 2em; }
