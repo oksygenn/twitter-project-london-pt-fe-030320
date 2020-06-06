@@ -206,7 +206,6 @@ div.tweet-comment-field {
 
   textarea {
     @include textarea-design;
-    border: 1px solid rgb(189, 181, 181);
     height: 15vh;
   }
 
@@ -220,8 +219,6 @@ div.tweet-comment-field {
     input[type="submit"] {
       position: absolute;
       right: 0;
-      background-color: $background;
-      color: $theme-primary;
       width: 77px;
       height: 29px;
       border: none;
@@ -230,6 +227,19 @@ div.tweet-comment-field {
       // cursor: pointer;
     }
   }
+}
+
+.border-secondary {
+  border: 1px solid rgb(189, 181, 181);
+}
+
+.border-primary {
+  border: 1px solid $theme-primary;
+}
+
+.reply-btn {
+  background-color: $background;
+  color: $theme-primary;
 }
 
 .hidden,

@@ -135,7 +135,6 @@ div.tweet-comment-field {
     font-size: 0.9em;
     font-weight: 300;
     outline: 0;
-    border: 1px solid #bdb5b5;
     height: 15vh; }
   div.tweet-comment-field textarea::placeholder {
     color: grey; }
@@ -144,13 +143,21 @@ div.tweet-comment-field {
     div.tweet-comment-field .tweet-comment-buttons input[type="submit"] {
       position: absolute;
       right: 0;
-      background-color: black;
-      color: #e7e417;
       width: 77px;
       height: 29px;
       border: none;
       border-radius: 4px;
       outline: 0; }
+
+.border-secondary {
+  border: 1px solid #bdb5b5; }
+
+.border-primary {
+  border: 1px solid #e7e417; }
+
+.reply-btn {
+  background-color: black;
+  color: #e7e417; }
 
 .hidden,
 .template {
@@ -255,3 +262,38 @@ div.textarea {
 
 textarea::placeholder {
   color: #e7e417; }
+
+body.comments-body {
+  background-color: black; }
+
+main.comments-background {
+  height: 100vh;
+  background: url(../images/main-yellow-shape.svg) left 50% top 35%, url(../images/main-purple-right.svg) right 0 top 50%, url(../images/main-purple-left.svg) left 0 bottom 10%, url(../images/girl.svg) left 50% bottom 20%;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
+.comments-header {
+  padding: 1em; }
+
+.comment-user-details {
+  color: #fff; }
+
+.comment-tweet-btn {
+  background-color: black;
+  color: #e7e417;
+  border: none;
+  font-size: 0.8em;
+  margin: 1em; }
+
+.comments-container {
+  background-color: transparent;
+  width: 80vw;
+  margin: 0 auto;
+  height: 100vh; }
+
+.comment-btn {
+  color: black;
+  background-color: #e7e417; }
+
+.background-textarea {
+  background-color: black; }

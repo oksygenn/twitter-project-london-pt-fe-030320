@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Tweet</title>
+  </head>
+  <body class="comments-body">
+    <header class="comments-header">
+      <img class="go-back" src="../images/yellow-arrow.svg" alt="" />
+      <button class="comment-tweet-btn">Tweet</button>
+    </header>
+    <div class="tweet-yellow-line"></div>
+
+    <main class="comments-background">
+      <div class="container">
+        <div class="tweet">
+          <div class="tweet-line"></div>
+          <div class="tweet-footer">
+            <div class="tweet-buttons">
+              <div class="like-button button counter-btn">
+                <p class="like-quantity quantity"></p>
+              </div>
+              <div class="retweet-button button counter-btn">
+                <p class="retweet-quantity quantity">0</p>
+              </div>
+              <div class="comment-button button">
+                <img src="images/comment.svg" alt="comment icon" />
+                <p class="comment-quantity quantity">0</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tweet-comment-field">
+            <div class="comment-line"></div>
+            <textarea
+              class="comment-body border-primary background-textarea"
+              type="text"
+              placeholder="Leave your comment here"
+            ></textarea
+            ><br />
+            <div class="tweet-comment-buttons">
+              <img src="images/back-arrow.svg" alt="" />
+              <input
+                type="submit"
+                class="reply-to-tweet comment-btn"
+                value="Reply"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="./js/comments.js"></script>
+</html>

@@ -1,0 +1,46 @@
+body.comments-body {
+  background-color: $background;
+  // text-align: center;
+}
+
+main.comments-background {
+  height: 100vh;
+  background: url(../images/main-yellow-shape.svg) left 50% top 35%,
+    url(../images/main-purple-right.svg) right 0 top 50%,
+    url(../images/main-purple-left.svg) left 0 bottom 10%,
+    url(../images/girl.svg) left 50% bottom 20%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.comments-header {
+  padding: 1em;
+}
+
+.comment-user-details {
+  color: #fff;
+}
+
+.comment-tweet-btn {
+  background-color: $background;
+  color: $theme-primary;
+  border: none;
+  font-size: 0.8em;
+  margin: 1em;
+}
+
+.comments-container {
+  background-color: transparent;
+  width: 80vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.comment-btn {
+  color: $background;
+  background-color: $theme-primary;
+}
+
+.background-textarea {
+  background-color: $background;
+}
