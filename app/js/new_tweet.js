@@ -1,5 +1,8 @@
 import API from "./API.js";
 import localStorage from "./localStorage.js";
+import checkIfUserLoggedIn from "./loginChecker.js";
+
+checkIfUserLoggedIn();
 
 const userId = localStorage.getUserID();
 const tweetButton = document.querySelector(".tweet-btn");

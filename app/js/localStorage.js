@@ -15,7 +15,7 @@ const clearUserID = () => {
 
 const isUserLoggedIn = () => {
   const userId = getUserID();
-  if (userId !== undefined) {
+  if (userId >= 0) {
     return true;
   } else {
     return false;

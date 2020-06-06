@@ -1,5 +1,9 @@
 import API from "./API.js";
 import localStorage from "./localStorage.js";
+import checkIfUserLoggedIn from "./loginChecker.js";
+
+checkIfUserLoggedIn();
+
 const tweetsContainer = document.querySelector(".tweets-container");
 
 const userId = localStorage.getUserID();
@@ -10,13 +14,9 @@ const toggling = (elem, classToToggle) => {
 };
 
 const loadTweets = async () => {
-  if (localStorage.isUserLoggedIn()) {
-    tweets = await API.getTweets();
-    tweets = tweets.reverse();
-    createTweetDiv();
-  } else {
-    window.location.replace("./login.html");
-  }
+  tweets = await API.getTweets();
+  tweets = tweets.reverse();
+  createTweetDiv();
 };
 
 const createTweetDiv = () => {
@@ -37,7 +37,6 @@ const createTweetDiv = () => {
     const commentBtn = tweetDiv.querySelector(".comment-button");
     const commentField = tweetDiv.querySelector("div .tweet-comment-field");
     commentBtn.addEventListener("click", () => {
-      // commentField.classList.toggle("hidden");
       toggling(commentField, "hidden");
     });
 
@@ -91,7 +90,6 @@ const setUpCounters = (tweetDiv) => {
         quantity.innerText = parseInt(quantity.innerText) + 1;
         toggling(quantity, "purple");
       }
-      // button.classList.toggle("filled");
       toggling(button, "filled");
     });
   });
