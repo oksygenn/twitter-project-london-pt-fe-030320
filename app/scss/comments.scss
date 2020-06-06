@@ -44,3 +44,38 @@ main.comments-background {
 .background-textarea {
   background-color: $background;
 }
+
+.relative {
+  position: relative;
+}
+
+.tweet-page {
+  display: flex;
+  align-items: flex-start;
+  color: rgb(202, 197, 197);
+  width: 100vw;
+  padding-top: 1em;
+  z-index: 1;
+  background-color: $background;
+
+  .tweet-icon {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: $theme-primary;
+    clip-path: circle(49% at center);
+    margin: 0 2em;
+  }
+}
+
+.tweet-user-details {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: white;
+}
+
+.tweet-content-color {
+  color: white;
+  font-weight: 200;
+}

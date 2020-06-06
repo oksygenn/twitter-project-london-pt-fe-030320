@@ -88,10 +88,6 @@ header.main-page {
       grid-template-columns: auto auto;
       font-size: 0.8em;
 
-      .user-info {
-        font-style: italic;
-      }
-
       li {
         padding: 0.5em 0;
         list-style: none;
@@ -102,17 +98,21 @@ header.main-page {
       }
     }
   }
+}
 
-  .header-purple-hr-line {
-    border-bottom: 1px solid $theme-secondary;
-    margin: 0.4em 1em 0.4em 0;
-  }
+.user-info {
+  font-style: italic;
+  font-size: 0.8em;
+}
+.header-purple-hr-line {
+  border-bottom: 1px solid $theme-secondary;
+  margin: 0.4em 1em 0.4em 0;
+}
 
-  .header-grey-hr-line {
-    border-bottom: 1px solid rgb(170, 170, 114);
-    width: 60%;
-    margin-bottom: 0.7em;
-  }
+.header-grey-hr-line {
+  border-bottom: 1px solid rgb(170, 170, 114);
+  width: 60%;
+  margin-bottom: 0.7em;
 }
 
 .tweets-container {
@@ -147,18 +147,17 @@ header.main-page {
     .tweet-body {
       padding: 0.8em 1.3em 0 1.3em;
       font-weight: 200;
-
-      .tweet-line {
-        @include line;
-      }
     }
   }
+}
+
+.tweet-line {
+  @include line;
 }
 
 .tweet-buttons {
   display: flex;
   justify-content: space-around;
-  // position: relative;
   color: grey;
 
   .button {
@@ -198,12 +197,6 @@ header.main-page {
 }
 
 div.tweet-comment-field {
-  padding: 0 1em;
-
-  .comment-line {
-    @include line;
-  }
-
   textarea {
     @include textarea-design;
     height: 15vh;
@@ -227,6 +220,14 @@ div.tweet-comment-field {
       // cursor: pointer;
     }
   }
+}
+
+.page-padding {
+  padding: 0 1em;
+}
+
+.comment-line {
+  @include line;
 }
 
 .border-secondary {

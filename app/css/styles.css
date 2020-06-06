@@ -51,20 +51,24 @@ header.main-page {
       display: grid;
       grid-template-columns: auto auto;
       font-size: 0.8em; }
-      header.main-page div.user-details ul.details-extra .user-info {
-        font-style: italic; }
       header.main-page div.user-details ul.details-extra li {
         padding: 0.5em 0;
         list-style: none; }
         header.main-page div.user-details ul.details-extra li span.bold-numbers {
           font-weight: 700; }
-  header.main-page .header-purple-hr-line {
-    border-bottom: 1px solid purple;
-    margin: 0.4em 1em 0.4em 0; }
-  header.main-page .header-grey-hr-line {
-    border-bottom: 1px solid #aaaa72;
-    width: 60%;
-    margin-bottom: 0.7em; }
+
+.user-info {
+  font-style: italic;
+  font-size: 0.8em; }
+
+.header-purple-hr-line {
+  border-bottom: 1px solid purple;
+  margin: 0.4em 1em 0.4em 0; }
+
+.header-grey-hr-line {
+  border-bottom: 1px solid #aaaa72;
+  width: 60%;
+  margin-bottom: 0.7em; }
 
 .tweets-container {
   background-color: transparent;
@@ -93,9 +97,10 @@ header.main-page {
     .tweets-container .tweet .tweet-body {
       padding: 0.8em 1.3em 0 1.3em;
       font-weight: 200; }
-      .tweets-container .tweet .tweet-body .tweet-line {
-        border-bottom: 1px solid #cacaca;
-        margin: 1em 0; }
+
+.tweet-line {
+  border-bottom: 1px solid #cacaca;
+  margin: 1em 0; }
 
 .tweet-buttons {
   display: flex;
@@ -121,33 +126,37 @@ header.main-page {
   .tweet-buttons .purple {
     color: #dd00f0; }
 
-div.tweet-comment-field {
-  padding: 0 1em; }
-  div.tweet-comment-field .comment-line {
-    border-bottom: 1px solid #cacaca;
-    margin: 1em 0; }
-  div.tweet-comment-field textarea {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0.7em;
+div.tweet-comment-field textarea {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.7em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 300;
+  outline: 0;
+  height: 15vh; }
+
+div.tweet-comment-field textarea::placeholder {
+  color: grey; }
+
+div.tweet-comment-field .tweet-comment-buttons {
+  position: relative; }
+  div.tweet-comment-field .tweet-comment-buttons input[type="submit"] {
+    position: absolute;
+    right: 0;
+    width: 77px;
+    height: 29px;
+    border: none;
     border-radius: 4px;
-    font-size: 0.9em;
-    font-weight: 300;
-    outline: 0;
-    height: 15vh; }
-  div.tweet-comment-field textarea::placeholder {
-    color: grey; }
-  div.tweet-comment-field .tweet-comment-buttons {
-    position: relative; }
-    div.tweet-comment-field .tweet-comment-buttons input[type="submit"] {
-      position: absolute;
-      right: 0;
-      width: 77px;
-      height: 29px;
-      border: none;
-      border-radius: 4px;
-      outline: 0; }
+    outline: 0; }
+
+.page-padding {
+  padding: 0 1em; }
+
+.comment-line {
+  border-bottom: 1px solid #cacaca;
+  margin: 1em 0; }
 
 .border-secondary {
   border: 1px solid #bdb5b5; }
@@ -297,3 +306,32 @@ main.comments-background {
 
 .background-textarea {
   background-color: black; }
+
+.relative {
+  position: relative; }
+
+.tweet-page {
+  display: flex;
+  align-items: flex-start;
+  color: #cac5c5;
+  width: 100vw;
+  padding-top: 1em;
+  z-index: 1;
+  background-color: black; }
+  .tweet-page .tweet-icon {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #e7e417;
+    clip-path: circle(49% at center);
+    margin: 0 2em; }
+
+.tweet-user-details {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: white; }
+
+.tweet-content-color {
+  color: white;
+  font-weight: 200; }
