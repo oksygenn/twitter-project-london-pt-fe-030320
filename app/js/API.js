@@ -1,4 +1,4 @@
-const API_ENDPOINT = "http://localhost:3000";
+const API_ENDPOINT = "https://twitter-project-backend.glitch.me";
 const USERS_URL = `${API_ENDPOINT}/users`;
 const TWEETS_URL = `${API_ENDPOINT}/tweets?_expand=user&_embed=comments`;
 
